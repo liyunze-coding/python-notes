@@ -96,10 +96,6 @@ h4 {
 	font-family: "montserrat-bold";
 }
 
-h1 {
-	text-align: center;
-}
-
 .titleChar:hover {
 	position: relative;
 	bottom: 2px;
