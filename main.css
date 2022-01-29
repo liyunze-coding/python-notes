@@ -22,6 +22,7 @@ body {
 	background-color: #212121;
 	position: fixed;
 	top: 0;
+	right: 0;
 }
 
 .navBar-ul {
