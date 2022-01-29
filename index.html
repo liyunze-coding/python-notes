@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <meta http-equiv="X-UA-Compatible" content='IE=edge'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel='stylesheet' type='text/css' href='main.css'>
+        <title>Python notes</title>
+        <script>
+            function showMenu(x) {
+                x.classList.toggle("change");
+            }
+        </script>
+        <style>
+            .main-content{
+                padding-top:80px;
+                font-family:'montserrat';
+                color:#fafafa;
+                margin:auto;
+                width:80%;
+                text-align: center;
+            }
+
+            h1{
+                font-family: 'montserrat-bold';
+            }
+
+            h3 {
+                font-family: 'roboto-light';
+            }
+
+            .titleChar:hover {
+                position:relative;
+                bottom: 2px;
+                display: inline-block;
+            }
+            .cyanText:hover{
+                color: #0ff;;
+            }
+
+            .image {
+                display: inline-block;
+                padding: 20px;
+                vertical-align: middle;
+            }
+
+            .description{
+                width:75%;
+                font-size:18px;
+                position:relative;
+                font-family:'montserrat';
+                text-align:left;
+                margin:auto;
+                line-height: 1.5em;
+            }
+
+            .underline{
+                text-decoration:underline;
+            }
+
+            .heading {
+                margin:auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div class='navBar'>
+            <ul class='navBar-ul'>
+                <li><a href="author.html">Author</a></li>
+                <li>
+                    <a href='./topics.html'>Topics</a>
+                    <ul class='navBar-ul'>
+                        <li><a href="./topics/getting-started.html">Getting started</a></li>
+                        <li><a href="./topics/data-types.html">Data types</a></li>
+                        <li><a href="./topics/if-else.html">If else</a></li>
+                    </ul>
+                </li>
+                <li><a href class='active'>Home</a></li>
+                <span class="clear"></span>
+            </ul>
+        </div>
+        <div class='main-content'>
+            <h1 class='heading'>
+                <span class='titleChar cyanText noselect'>W</span
+                ><span class='titleChar cyanText noselect'>e</span
+                ><span class='titleChar cyanText noselect'>l</span
+                ><span class='titleChar cyanText noselect'>c</span
+                ><span class='titleChar cyanText noselect'>o</span
+                ><span class='titleChar cyanText noselect'>m</span
+                ><span class='titleChar cyanText noselect'>e</span
+                ><span class='noselect'> </span
+                ><span class='titleChar cyanText noselect'>t</span
+                ><span class='titleChar cyanText noselect'>o</span
+                ><span class='noselect'> </span
+                ><span class='titleChar cyanText noselect'>R</span
+                ><span class='titleChar cyanText noselect'>y</span
+                ><span class='titleChar cyanText noselect'>a</span
+                ><span class='titleChar cyanText noselect'>n</span
+                ><span class='titleChar cyanText noselect'>'</span
+                ><span class='titleChar cyanText noselect'>s</span
+                ><span class='noselect'> </span
+                ><span class='titleChar cyanText noselect'>P</span
+                ><span class='titleChar cyanText noselect'>y</span
+                ><span class='titleChar cyanText noselect'>t</span
+                ><span class='titleChar cyanText noselect'>h</span
+                ><span class='titleChar cyanText noselect'>o</span
+                ><span class='titleChar cyanText noselect'>n</span
+                ><span class='noselect'> </span
+                ><span class='titleChar cyanText noselect'>n</span
+                ><span class='titleChar cyanText noselect'>o</span
+                ><span class='titleChar cyanText noselect'>t</span
+                ><span class='titleChar cyanText noselect'>e</span
+                ><span class='titleChar cyanText noselect'>b</span
+                ><span class='titleChar cyanText noselect'>o</span
+                ><span class='titleChar cyanText noselect'>o</span
+                ><span class='titleChar cyanText noselect'>k</span
+                ><span class='titleChar cyanText noselect'>!</span
+                >
+            </h1>
+            <h3>The Perfect Python Notebook for Gen-Z</h3>
+            <img class='image' style='height:220px;' src="images/logo.png">
+            <img class='image' style='height:200px;' src="images/python.png">
+
+            <p class='description'>
+                Hey, I'm Ryan! 
+                <br><br>
+                The aim for this project is to make it <span class='underline'>fun</span> and <span class='underline'>educational</span>!  
+                This project is aimed towards the younger generation, so there will be a few pop culture references in the notes :)
+                <br><br>
+                My goal is to help others understand the concept of programming, and to be able to see it as a sandbox game, 
+                where you have the free will to create fun things, show off to your friends and help express your creativity!
+                <br><br>
+                I chose Python because it is the programming language I have the most experience in. It's also very beginner friendly, 
+                have a ton of resources/libraries and widely popular. 
+                </p>
+            <p class='copyright'>©2022 by liyunze-coding.</p>
+        </div>
+    </body>
+</html>

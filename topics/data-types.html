@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <meta http-equiv="X-UA-Compatible" content='IE=edge'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel='stylesheet' type='text/css' href='./../main.css'>
+        <link rel="stylesheet" href="./vs2015.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <zero-md src="README.md"></zero-md>
+        <title>Data types</title>
+        <script>
+            function showMenu(x) {
+                x.classList.toggle("change");
+            }
+        </script>
+        <style>
+            h1, h2 {
+                font-family: 'montserrat-bold'
+            }
+
+            h1 {
+                text-align:center;
+            }
+
+            .titleChar:hover {
+                position:relative;
+                bottom: 2px;
+                display: inline-block;
+            }
+            .cyanText:hover{
+                color: #0ff;
+            }
+
+            .mini {
+                text-align:left;
+                font-family:'montserrat';
+            }
+
+            .text-content {
+                font-family:'montserrat';
+                text-align: left;
+                font-size:17px;
+                line-height:1.5em;
+                display: inline-block;
+                width:100%;
+            }
+
+            .main-content{
+                padding-top: 50px;
+                margin:auto;
+                width:50%;
+                font-family:'montserrat';
+                line-height:1.2em;
+            }
+            .data-types-list {
+                list-style-type:circle;
+                text-align: left;
+                display:table;
+                line-height:1.5em;
+            }
+
+            a {
+                text-decoration: none;
+                color:#fafafa;
+            }
+
+            a:hover {
+                text-decoration: underline;
+            }
+
+            @media screen and (max-width: 900px) {
+                .main-content {
+                    width: 90%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class='navBar'>
+            <ul class='navBar-ul'>
+                <li><a href="./../author.html">Author</a></li>
+                <li>
+                    <a href='./../topics.html'>Topics</a>
+                    <ul class='navBar-ul'>
+                        <li><a href='./getting-started.html'>Getting started</a></li>
+                        <li><a href class='active'>Data types</a></li>
+                        <li><a href="./if-else.html">If else</a></li>
+                    </ul>
+                </li>
+                <li><a href='./../'>Home</a></li>
+                <span class="clear"></span>
+            </ul>
+        </div>
+        <div class='main-content'>
+            <h1>
+                <span class='titleChar cyanText noselect'>D</span
+                ><span class='titleChar cyanText noselect'>a</span
+                ><span class='titleChar cyanText noselect'>t</span
+                ><span class='titleChar cyanText noselect'>a</span
+                ><span> </span
+                ><span class='titleChar cyanText noselect'>t</span
+                ><span class='titleChar cyanText noselect'>y</span
+                ><span class='titleChar cyanText noselect'>p</span
+                ><span class='titleChar cyanText noselect'>e</span
+                ><span class='titleChar cyanText noselect'>s</span
+                >
+            </h1>
+            <br>
+            <div class='mini'>
+                There are 5 basic data types in Python.
+                <ul class='data-types-list'>
+                    <li><a href='#string'>String</a></li>
+                    <li><a href='#int'>Integer</a></li>
+                    <li><a href='#int'>Float</a></li>
+                    <li><a href='#list'>List</a></li>
+                    <li><a href='#boolean'>Boolean</a></li>
+                </ul>
+            </div>
+            <br>
+            <hr id='string'>
+            <br>
+            <h2>String</h2>
+            <code class='short-code'>"Hello world"</code>
+            <p class='text-content'>
+                Strings are basically characters surrounded by quotes.  It can be single quotes like <code class='short-code'>'this'</code>
+                or it could be double quotes, like <code class='short-code'>"this"</code>
+            </p>
+            <p class='text-content'>
+                <code class='short-code'>\</code> : is a special character in Python's String
+                <br>
+                <code class='short-code'>\n</code> : creates a new line
+                <div class='code-block'>
+                    <pre><code class="lang-py"><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">"This is line 1 \nThis is line 2"</span>)</span></span></code></pre>
+                </div>
+                <br>
+                result:
+                <br><br>
+                <div class='code-block'>
+                    <code>This is line 1
+                    This is line 2
+                    </code>
+                </div>
+                <br>
+                <h4>Getting the length of a string</h4>
+                <code class='short-code'>len()</code> is short for 'length', it returns the length of a string, list or tuple.
+                <div class='code-block'>
+                    <pre><code class="lang-py"><span class="hljs-meta">&gt;&gt;</span>&gt; len(<span class="hljs-string">"Spiderman: No Way Home"</span>)
+                    <span class="hljs-number">22</span>
+                    <span class="hljs-meta">&gt;&gt;</span>&gt; <span class="hljs-comment">#each space is included as a character</span>
+                    </code></pre>
+                </div>
+                </code>
+                <h4>Concatenate</h4>
+                Concatenate: to combine 2 or more strings into 1 string.
+                <div class='code-block'>
+                    <pre><code class="lang-py"><span class="hljs-meta">&gt;&gt;</span>&gt; <span class="hljs-string">"Hello"</span> + <span class="hljs-string">" "</span> + <span class="hljs-string">"World"</span>
+                        <span class="hljs-string">'Hello World'</span>
+                        </code></pre>
+                </div>
+                <div class='code-block'>
+                    <pre><code class="lang-py"><span class="hljs-built_in">name</span> = <span class="hljs-string">"Ryan"</span>
+                        <span class="hljs-built_in">name</span> = <span class="hljs-built_in">name</span> + <span class="hljs-string">" is smart"</span>
+                        
+                        print(<span class="hljs-built_in">name</span>) <span class="hljs-comment"># 'Ryan is smart'</span>
+                        </code></pre>
+                </div>
+                A more concise way of doing it (optional)
+                <div class='code-block'>
+                    <pre><code class="lang-py">'''
+                        instead of 
+                        name = name + ...
+                        you can do
+                        name += ...
+                        '''
+                        
+                        name = "Ryan"
+                        name += " is smart"
+                        print(name) #<span class="hljs-emphasis">'Ryan is smart'</span>
+                        </code></pre>
+                </div>
+                <h4>String formatting</h4>
+                Let's say we want to create a string like so
+                <br><br>
+                <code class='short-code'>His name is Ryan.  Ryan likes to code.  Ryan is 18 years old.</code>
+                <br><br>
+                manually changing the name from <code class='short-code'>Ryan</code> to <code class='short-code'>Hanate Wakuso Shiseo Tadashite Teriyaki Suzuki Honda Civic</code> can be a little annoying, so we use string formatting to change the string faster.
+                <h4>Level 1: using '+'</h4>
+                <div class='code-block'>
+                    <pre><code class="lang-py">name = <span class="hljs-string">"Ryan"</span>
+                        hobby = <span class="hljs-string">"code"</span>
+                        age = <span class="hljs-number">18</span>
+                        
+                        res = <span class="hljs-string">"His name is "</span> + name + <span class="hljs-string">". "</span> + name + <span class="hljs-string">"likes to code."</span>
+                        
+                        <span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(res)</span></span> #<span class="hljs-string">'His name is Ryan.  Ryan likes to code.'</span>
+                        
+                        res += <span class="hljs-string">" "</span> + name + <span class="hljs-string">"is "</span> + str(age) + <span class="hljs-string">" years old."</span>
+                        
+                        #str(age) is necessary because int + str will result <span class="hljs-keyword">in</span> an error
+                        
+                        <span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(res)</span></span> <span class="hljs-selector-id">#His</span> name is Ryan.  Ryan likes to <span class="hljs-selector-tag">code</span>.  Ryan is <span class="hljs-number">18</span> years old.
+                        </code></pre>
+                </div>
+                <h4>Level 2: old school %s %i</h4>
+                <div class='code-block'>
+                    <pre><code class="lang-py">name = <span class="hljs-string">"Ryan"</span>
+                        hobby = <span class="hljs-string">"code"</span>
+                        age = <span class="hljs-number">18</span>
+                        
+                        <span class="hljs-keyword">res</span> = <span class="hljs-string">"His name is %s."</span> % name
+                        <span class="hljs-keyword">print</span>(<span class="hljs-keyword">res</span>) #<span class="hljs-string">'His name is Ryan'</span>
+                        
+                        <span class="hljs-keyword">res</span> = <span class="hljs-string">"His name is %(name)s.  %(name)s likes to %(hobby)s.  %(name)s is %(age)i years old."</span> % {<span class="hljs-string">'name'</span>: <span class="hljs-string">'ryan'</span>, <span class="hljs-string">'hobby'</span>:<span class="hljs-string">'code'</span>, <span class="hljs-string">'age'</span>: <span class="hljs-number">18</span>}
+                        
+                        <span class="hljs-keyword">print</span>(<span class="hljs-keyword">res</span>) #His name <span class="hljs-keyword">is</span> Ryan.  Ryan likes <span class="hljs-keyword">to</span> code.  Ryan <span class="hljs-keyword">is</span> <span class="hljs-number">18</span> years old.
+                        </code></pre>                        
+                </div>
+                <h4>Level 3: .format()</h4>
+                <div class='code-block'>
+                    <pre><code class="lang-py">name = <span class="hljs-string">"Ryan"</span>
+                        hobby = <span class="hljs-string">"code"</span>
+                        age = <span class="hljs-number">18</span>
+                        
+                        res = <span class="hljs-string">"His name is {}"</span>.format(name)
+                        <span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(res)</span></span> <span class="hljs-selector-id">#His</span> name is Ryan
+                        
+                        res = <span class="hljs-string">"His name is {name}. {name} likes to {hobby}. {name} is {age} years old."</span>.format(name=name, hobby=hobby, age=age)
+                        
+                        <span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(res)</span></span> <span class="hljs-selector-id">#His</span> name is Ryan.  Ryan likes to <span class="hljs-selector-tag">code</span>.  Ryan is <span class="hljs-number">18</span> years old.
+                        </code></pre>                        
+                </div>
+                <h4>Level 4: f-strings</h4>
+                <div class='code-block'>
+                    <pre><code class="lang-py">name = <span class="hljs-string">"Ryan"</span>
+                        hobby = <span class="hljs-string">"code"</span>
+                        age = <span class="hljs-number">18</span>
+                        
+                        res = f<span class="hljs-string">"His name is {name}"</span>
+                        <span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(res)</span></span> <span class="hljs-selector-id">#His</span> name is Ryan
+                        
+                        res = f<span class="hljs-string">"His name is {name}. {name} likes to {hobby}. {name} is {age} years old."</span>
+                        
+                        <span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(res)</span></span> <span class="hljs-selector-id">#His</span> name is Ryan.  Ryan likes to <span class="hljs-selector-tag">code</span>.  Ryan is <span class="hljs-number">18</span> years old.
+                        </code></pre>                        
+                </div>
+                Note: <br>
+                change the line from <code class='short-code'>name = "Ryan"</code> to <code class='short-code'>name = "Hanate Wakuso Shiseo Tadashite Teriyaki Suzuki Honda Civic"</code>
+                <h3>String slicing</h3>
+                <div class='code-block'>
+                    <pre><code class="lang-py"><span class="hljs-meta">&gt;&gt;</span>&gt; word = <span class="hljs-string">'password'</span>
+                        <span class="hljs-meta">&gt;&gt;&gt; </span> word[<span class="hljs-number">1</span><span class="hljs-symbol">:</span><span class="hljs-number">4</span>]
+                        <span class="hljs-string">'ass'</span>
+                        </code></pre>                        
+                </div>
+                <code class='short-code'>string[index 1:index 2]</code>
+                <br><br>
+                index 1:
+                <ul>
+                    <li>starting of with the desired index</li>
+                    <li>remember that index starts with 0 in Python</li>
+                </ul>
+                index 2:
+                <ul>
+                    <li>for convenience, remember that <code class='short-code'>index 2 = index 1 + length of substring</code></li>
+                </ul>
+            </p>
+            <br>
+            <hr id='int'>
+            <br>
+            <h2>Integer and Floats</h2>
+            <div class='code-block'>
+                <pre><code class="lang-py">&gt;&gt;&gt; <span class="hljs-number">1.0</span> + <span class="hljs-number">2</span>
+                    <span class="hljs-number">3.0</span>
+                    &gt;&gt;&gt; <span class="hljs-number">6</span> * <span class="hljs-number">0.5</span>
+                    <span class="hljs-number">3.0</span>
+                    &gt;&gt;&gt; <span class="hljs-number">6</span> / <span class="hljs-number">2</span>
+                    <span class="hljs-number">3.0</span>
+                    &gt;&gt;&gt; <span class="hljs-number">7</span> % <span class="hljs-number">2</span> #remainder
+                    <span class="hljs-number">1</span>
+                    &gt;&gt;&gt; <span class="hljs-number">9</span> % <span class="hljs-number">5</span>
+                    <span class="hljs-number">4</span>
+                    &gt;&gt;&gt; <span class="hljs-number">7</span> // 2 #round down to nearest whole number
+                    <span class="hljs-number">3</span>
+                    &gt;&gt;&gt; <span class="hljs-number">9</span> // 2.0
+                    <span class="hljs-number">4.0</span>
+                    </code></pre>
+            </div>
+            <p class='text-content'>
+                <h3>Exponents/power</h3>
+                <div class='code-block'>
+                    <pre><code class="lang-py">&gt;&gt;&gt; <span class="hljs-number">5</span>**<span class="hljs-number">2</span> #<span class="hljs-number">5</span>^<span class="hljs-number">2</span> or <span class="hljs-number">5</span>*<span class="hljs-number">5</span>
+                        <span class="hljs-number">25</span>
+                        &gt;&gt;&gt; <span class="hljs-number">5</span>**<span class="hljs-number">3</span> #<span class="hljs-number">5</span>^<span class="hljs-number">3</span> or <span class="hljs-number">5</span>*<span class="hljs-number">5</span>*<span class="hljs-number">5</span>
+                        <span class="hljs-number">125</span>
+                        </code></pre>                    
+                </div>
+                <h3>Pro tip</h3>
+                <div class='code-block'>
+                    <pre><code class="lang-py"><span class="hljs-selector-id">#instead</span> of
+                        <span class="hljs-selector-tag">a</span> = <span class="hljs-selector-tag">a</span> + <span class="hljs-number">1</span>
+                        
+                        <span class="hljs-selector-id">#we</span> can do
+                        <span class="hljs-selector-tag">a</span> += <span class="hljs-number">1</span>
+                        
+                        <span class="hljs-selector-id">#or</span> even
+                        <span class="hljs-selector-tag">a</span> += <span class="hljs-number">1.5</span>
+                        <span class="hljs-selector-tag">a</span> += <span class="hljs-number">5</span>
+                        </code></pre>                    
+                </div>
+                <br>
+                <hr id='list'>
+                <br>
+                <h2>Lists & tuples</h2>
+                <strong>ARRAYS ALWAYS START FROM 0</strong> (common rule in popular programming languages)
+                <br><br>
+                Arrays from other programming languages are equivalent to Python's list.
+                <br><br>
+                A list can store multiple values such as strings, int, float, boolean and even other lists.
+                <div class='code-block'>
+                    <pre><code class="lang-py"><span class="hljs-attr">list1</span> = [<span class="hljs-string">'hello world'</span>, <span class="hljs-literal">True</span>, <span class="hljs-number">9</span>, [<span class="hljs-string">'another list lol'</span>, <span class="hljs-string">'lmao'</span>]]
+                    </code></pre>
+                </div>
+                <br>
+                A tuple (pronounced tyu-pel) is like a list, but the contents of it cannot be changed.
+                <div class='code-block'>
+                    <pre><code class="lang-py"><span class="hljs-meta">&gt;&gt;</span>&gt; diamond_tools = (<span class="hljs-string">'sword'</span>, <span class="hljs-string">'pickaxe'</span>, <span class="hljs-string">'shovel'</span>, <span class="hljs-string">'axe'</span>)
+                        <span class="hljs-meta">&gt;&gt;&gt;</span> diamond_tools.append(<span class="hljs-string">'hoe'</span>)
+                        Traceback (most recent call last):
+                          File <span class="hljs-string">"&lt;stdin&gt;"</span>, line <span class="hljs-number">1</span>, <span class="hljs-keyword">in</span> &lt;<span class="hljs-class"><span class="hljs-keyword">module</span>&gt;</span>
+                        <span class="hljs-symbol">AttributeError:</span> <span class="hljs-string">'tuple'</span> object has no attribute <span class="hljs-string">'append'</span>
+                        </code></pre>                        
+                </div>
+                As previously mentioned, lists/arrays start with 0, that means the first element's index is 0, second element's index is 1... 10th element's index is 9 etc.
+                <div class='code-block'>
+                    <pre><code class="lang-py"><span class="hljs-meta">&gt;&gt;</span>&gt; list1 = [<span class="hljs-string">'zero'</span>, <span class="hljs-string">'one'</span>, <span class="hljs-string">'three'</span>]
+                        <span class="hljs-meta">&gt;&gt;&gt;</span> list1[<span class="hljs-number">0</span>]
+                        <span class="hljs-string">'zero'</span>
+                        <span class="hljs-meta">&gt;&gt;&gt;</span> list1[<span class="hljs-number">1</span>]
+                        <span class="hljs-string">'one'</span>
+                        <span class="hljs-meta">&gt;&gt;&gt;</span> list1[<span class="hljs-number">2</span>]
+                        <span class="hljs-string">'three'</span>
+                        </code></pre>                        
+                </div>
+                <code class='short-code'>.append()</code> adds another item into the list.
+                <div class='code-block'>
+                    <pre><code class="lang-py">fruits = [<span class="hljs-string">'watermelon'</span>, <span class="hljs-string">'banana'</span>, <span class="hljs-string">'apple'</span>]
+
+                        <span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(fruits)</span></span> #[<span class="hljs-string">'watermelon'</span>, <span class="hljs-string">'banana'</span>, <span class="hljs-string">'apple'</span>]
+                        
+                        fruits.append(<span class="hljs-string">'pineapple'</span>)
+                        
+                        <span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(fruits)</span></span> #[<span class="hljs-string">'watermelon'</span>, <span class="hljs-string">'banana'</span>, <span class="hljs-string">'apple'</span>, <span class="hljs-string">'pineapple'</span>]
+                        </code></pre>                        
+                </div>
+                to delete items from a list
+                <div class='code-block'>
+                    <pre><code class="lang-py"><span class="hljs-meta">&gt;&gt;</span>&gt; list1 = [<span class="hljs-string">'one'</span>, <span class="hljs-string">'two'</span>, <span class="hljs-string">'three'</span>]
+                    </code></pre>       
+                </div>
+                Option 1: del
+                <div class='code-block'>
+                    <pre><code class="lang-py"><span class="hljs-meta">&gt;&gt;</span>&gt; del list1[<span class="hljs-number">0</span>]
+                        <span class="hljs-meta">&gt;&gt;&gt;</span> list1
+                        [<span class="hljs-string">'two'</span>, <span class="hljs-string">'three'</span>]
+                        </code></pre>                        
+                </div>
+                Option 2: pop()
+                <div class='code-block'>
+                    <pre><code class="lang-py"><span class="hljs-meta">&gt;&gt;</span>&gt; list1.pop(<span class="hljs-number">0</span>)
+                        <span class="hljs-string">'one'</span>
+                        <span class="hljs-meta">&gt;&gt;&gt;</span> list1
+                        [<span class="hljs-string">'two'</span>, <span class="hljs-string">'three'</span>]
+                        </code></pre>                        
+                </div>
+                Option 3: remove()
+                <div class='code-block'>
+                    <pre><code class="lang-py"><span class="hljs-meta">&gt;&gt;</span>&gt; list1.remove(<span class="hljs-string">'one'</span>)
+                        <span class="hljs-meta">&gt;&gt;&gt;</span> list1
+                        [<span class="hljs-string">'two'</span>, <span class="hljs-string">'three'</span>]
+                        </code></pre>                        
+                </div>
+                Option 1 and option 2 are used when you have the index of the element
+                <br>
+                Option 3 is used when you have the element data
+                <h3>Check if item is in list</h3>
+                <div class='code-block'>
+                    <pre><code class="lang-py">&gt;&gt;&gt; <span class="hljs-number">5</span> in [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]
+                        True
+                        <span class="hljs-meta">&gt;&gt;&gt;</span> <span class="hljs-number">6</span> in [<span class="hljs-number">4</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>]
+                        False
+                        <span class="hljs-meta">&gt;&gt;&gt;</span> BTS = [<span class="hljs-string">"Suga"</span>, <span class="hljs-string">"Jungkook"</span>, <span class="hljs-string">"RM"</span>, <span class="hljs-string">"Jin"</span>, <span class="hljs-string">"Jimin"</span>, <span class="hljs-string">"J-Hope"</span>, <span class="hljs-string">"V"</span>]
+                        <span class="hljs-meta">&gt;&gt;&gt;</span> <span class="hljs-string">"Ryan"</span> in BTS
+                        False
+                        </code></pre>
+                </div>
+                <h3>Extra</h3>
+                In Python, strings can <strong>sometimes</strong> be treated like a list
+                <div class='code-block'>
+                    <pre><code class="lang-py"><span class="hljs-meta">&gt;&gt;&gt;</span> <span class="hljs-string">"1"</span> in <span class="hljs-string">"1234567890"</span>
+                        True
+                        <span class="hljs-meta">&gt;&gt;&gt;</span> name = <span class="hljs-string">"Ryan"</span>
+                        <span class="hljs-meta">&gt;&gt;&gt;</span> name[<span class="hljs-number">0</span>]
+                        <span class="hljs-string">'R'</span>
+                        <span class="hljs-meta">&gt;&gt;&gt;</span> name[<span class="hljs-number">2</span>]
+                        <span class="hljs-string">'a'</span>
+                        </code></pre>                        
+                </div>
+            </p>
+            <br>
+            <hr id='boolean'>
+            <br>
+            <h2>Boolean</h2>
+            <h3>Expressions</h3>
+            <p class='text-content'>
+                <code class='short-code'>==</code> is to verify that A <strong>is equal</strong> to B<br>
+                <code class='short-code'>!=</code> is to verify that A <strong>is NOT equal</strong> to B<br>
+                <code class='short-code'>"hello" == "hello"</code> returns <code class='short-code'>True</code><br>
+                <code class='short-code'>1 == 5</code> returns <code class='short-code'>False</code><br>
+                <h3>Logical operators</h3>
+                <div class='code-block'>
+                    <pre><code class="lang-py"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">True</span> <span class="hljs-keyword">and</span> <span class="hljs-keyword">True</span>
+                        <span class="hljs-keyword">True</span>
+                        <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">True</span> <span class="hljs-keyword">and</span> <span class="hljs-keyword">False</span>
+                        <span class="hljs-keyword">False</span>
+                        &gt;&gt;&gt;
+                        <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">True</span> <span class="hljs-keyword">or</span> <span class="hljs-keyword">False</span>
+                        <span class="hljs-keyword">True</span>
+                        <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">False</span> <span class="hljs-keyword">or</span> <span class="hljs-keyword">False</span>
+                        <span class="hljs-keyword">False</span>
+                        &gt;&gt;&gt;
+                        <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">not</span> <span class="hljs-keyword">False</span>
+                        <span class="hljs-keyword">True</span>
+                        <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">not</span> <span class="hljs-keyword">True</span>
+                        <span class="hljs-keyword">False</span>
+                        <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-string">'one'</span> <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> [<span class="hljs-string">'two'</span>, <span class="hljs-string">'three'</span>, <span class="hljs-string">'four'</span>]
+                        <span class="hljs-keyword">True</span>
+                        </code></pre>                        
+                </div>
+            </p>
+            <br>
+            <hr>
+            <br>
+            <h2>Conversion between data types</h2>
+            <ul>
+                <li><code class='short-code'>str()</code></li>
+                <li><code class='short-code'>int()</code></li>
+                <li><code class='short-code'>float()</code></li>
+                <li><code class='short-code'>list()</code></li>
+                <li><code class='short-code'>tuple()</code></li>
+                <li><code class='short-code'>bool()</code></li>
+            </ul>
+            I want <code class='short-code'>'5'</code> to be an integer so I can add <code class='short-code'>415</code> to it.
+            <br>
+            if I do this, I get an error
+            <div class='code-block'>
+                <pre><code class="lang-py"><span class="hljs-meta">&gt;&gt;</span>&gt; <span class="hljs-string">'5'</span> + <span class="hljs-number">415</span>
+                    Traceback (most recent call last):
+                      File <span class="hljs-string">"&lt;stdin&gt;"</span>, line <span class="hljs-number">1</span>, <span class="hljs-keyword">in</span> &lt;<span class="hljs-class"><span class="hljs-keyword">module</span>&gt;</span>
+                    <span class="hljs-symbol">TypeError:</span> can only concatenate str (<span class="hljs-keyword">not</span> <span class="hljs-string">"int"</span>) to str
+                    </code></pre>                    
+            </div>
+            because an integer and string cannot '+'
+            <br><br>
+            so I convert <code class='short-code'>'5'</code> using <code class='short-code'>int()</code> by doing
+            <div class='code-block'>
+                <pre><code class="lang-py"><span class="hljs-meta">&gt;&gt;</span>&gt; int(<span class="hljs-string">'5'</span>)
+                    <span class="hljs-number">5</span>
+                    <span class="hljs-meta">&gt;&gt;&gt;</span> num = <span class="hljs-string">'5'</span>
+                    <span class="hljs-meta">&gt;&gt;&gt;</span> num2 = int(num)
+                    <span class="hljs-meta">&gt;&gt;&gt;</span> num2 + <span class="hljs-number">415</span>
+                    <span class="hljs-number">420</span>
+                    </code></pre>                    
+            </div>
+            <br>
+            <hr>
+            <br>
+        </div>
+        <p class='copyright'>©2022 by liyunze-coding.</p>
+    </body>
+</html>

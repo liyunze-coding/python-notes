@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <meta http-equiv="X-UA-Compatible" content='IE=edge'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel='stylesheet' type='text/css' href='./../main.css'>
+        <link rel="stylesheet" href="./vs2015.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <title>Getting started</title>
+        <script>
+            function showMenu(x) {
+                x.classList.toggle("change");
+            }
+        </script>
+        <style>
+            .main-content {
+                padding-top: 40px;
+                margin:auto;
+                width:50%;
+            }
+
+            .text-content {
+                font-family:'montserrat';
+                text-align: left;
+                font-size:17px;
+                line-height:1.5em;
+                display: inline-block;
+            }
+
+            .images {
+                display: block;
+                width:100%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            a {
+                text-decoration: underline;
+                color:#fafafa;
+            }
+
+            .short-code{
+                background-color:#313131;
+                padding: 5px;
+                border-radius:5px;
+            }
+            code {
+                font-size:15px;
+            }
+            .code-block {
+                background-color:#313131;
+                width:100%;
+                padding: 5px;
+                border-radius:5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class='navBar'>
+            <ul class='navBar-ul'>
+                <li><a href="./../author.html">Author</a></li>
+                <li>
+                    <a href='./../topics.html'>Topics</a>
+                    <ul class='navBar-ul'>
+                        <li><a href class='active'>Getting started</a></li>
+                        <li><a href="./data-types.html">Data types</a></li>
+                        <li><a href="./if-else.html">If else</a></li>
+                    </ul>
+                </li>
+                <li><a href='./../'>Home</a></li>
+                <span class="clear"></span>
+            </ul>
+        </div>
+        <div class='main-content'>
+            <h1>
+                <span class='titleChar cyanText noselect'>G</span
+                ><span class='titleChar cyanText noselect'>e</span
+                ><span class='titleChar cyanText noselect'>t</span
+                ><span class='titleChar cyanText noselect'>t</span
+                ><span class='titleChar cyanText noselect'>i</span
+                ><span class='titleChar cyanText noselect'>n</span
+                ><span class='titleChar cyanText noselect'>g</span
+                ><span class='noselect'> </span
+                ><span class='titleChar cyanText noselect'>S</span
+                ><span class='titleChar cyanText noselect'>t</span
+                ><span class='titleChar cyanText noselect'>a</span
+                ><span class='titleChar cyanText noselect'>r</span
+                ><span class='titleChar cyanText noselect'>t</span
+                ><span class='titleChar cyanText noselect'>e</span
+                ><span class='titleChar cyanText noselect'>d</span
+                >
+            </h1>
+            <img src='./img/python-org-2.png' class='images'>
+            <h2>Installation</h2>
+            <p class='text-content'>
+                To install Python, simply go to <a href='https://python.org/downloads' target='_blank'>Python.org</a> and go to downloads, 
+                and download the latest version of Python ( make sure it's suitable for your OS ).
+                <br><br>
+                Run the installation file to install Python.
+                <br><br>
+                To check if Python is installed, go to Command Prompt ( or Terminal for macOS ).  
+                <br><br>
+                Check Python version using: <code class='short-code'>python --version</code>
+            </p>
+            <img src='./img/cmd.png' class='images'>
+            <p class='text-content'>
+                Just like the image above, you should be able to see the version of Python.  
+                However, if it outputs an error, that means that the installation was unsuccessful.
+                <br><br>
+                I highly recommend making a programming folder, easily accessible from your Desktop.
+                <br><br>
+                Although IDLE is a good software to code in Python, 
+                I suggest installing <a href='https://code.visualstudio.com' target='_blank'>Visual Studio Code</a> to enhance your programming experience.
+                VS Code is an IDE that has support for 100+ languages, 
+                has extensions available to help customise your programming experience and provides great debugging tools!  
+                <br><br>
+                It is available on Windows, macOS and Linux.
+            </p>
+            <img src='./img/vscode.png' class='images'>
+            <p class='text-content'>
+                After installing and opening VS code, you should see something like this.
+            </p>
+            <img src='./img/vscode_app.png' class='images'>
+            <p class='text-content'>
+                On the top left corner, there's an icon that looks like 2 sheets of paper.  Click on that icon and select 'Open Folder' if it is visible.  Then, open your programming folder there.  
+                The shortcut to open folder is Ctrl+K+O (or cmd+K+O).
+            </p>
+            <img src='./img/vscode4.png' class='images'>
+            <p class='text-content'>
+                I also suggest installing the Python extension, which can be found on this icon.  The extension provides support such as code highlighting, auto-completion and debugging.
+            </p>
+            <img src='./img/vscode2.png' class='images'>
+            <p class='text-content'>
+                You can create a new file using the shortcut Ctrl+N or cmd+N, or clicking the new file icon.  
+                When creating a new file, remember to include the file type by ending the filename with <code class='short-code'>.py</code>
+                <br><br>
+                For example: <code class='short-code'>helloWorld.py</code>
+            </p>
+            <img src='./img/vscode3.png' class='images'>
+            <p class='text-content'>
+                In the file, enter<br>
+                <div class='code-block'>
+                    <pre><code class="lang-py"><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">'hello world'</span>)</span></span></code></pre>
+                </div>
+            </p>
+            <p class='text-content'>
+                If you have installed the Python extension, you can click on the triangle on the top right of the app, and run the file.
+            </p>
+            <img src='./img/vscode5.png' class='images'>
+            <p class='text-content'>
+                There we go!  We just successfully printed 'hello world'!
+            </p>
+        </div>
+        <p class='copyright'>©2022 by liyunze-coding.</p>
+    </body>
+</html>
